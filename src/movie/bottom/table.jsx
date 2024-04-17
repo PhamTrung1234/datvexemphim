@@ -11,7 +11,8 @@ import { upSystem } from '../../store/action';
       const newSeat = newsystem.seat.filter(pro=>{
            return pro !== value
       })
-      newsystem.seat = newSeat
+      newsystem.seat = newSeat;
+      newsystem.total = newSeat.length;
       this.props.updateSystem(newsystem)
       
   }
